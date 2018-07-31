@@ -19,7 +19,7 @@ It's quite easy to work VueJS and ASP.NET MVC 5, let's check out in this article
 Step 1 - Install VueJS using NuGet
 ----------------------------------
 
-VueJS can be used either through CDN or by using NuGet package manager in ASP.NET MVC 5. Let's use NuGet,  right click on the project to open NuGet package manager window, search for **Vue** and then install it.[![Add VueJS using NuGet](http://www.mithunvp.com/wp-content/uploads/2017/08/vue-nuget.png)](http://www.mithunvp.com/wp-content/uploads/2017/08/vue-nuget.png) Once installed, it will add two files **_vue.js and vue.min.js_** (minified version) in the _Scripts_ folder
+VueJS can be used either through CDN or by using NuGet package manager in ASP.NET MVC 5. Let's use NuGet,  right click on the project to open NuGet package manager window, search for **Vue** and then install it.{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532975901/vue-nuget_bxjggh.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Add VueJS using NuGet" %} Once installed, it will add two files **_vue.js and vue.min.js_** (minified version) in the _Scripts_ folder
 
 Step 2 - Add VueJS script in _Layout page
 -----------------------------------------
@@ -74,11 +74,11 @@ The _**el**_ of new Vue instance should match with HTML DOM id property to kick 
 Step 4 - VueJS in action
 ------------------------
 
-Run the application, navigate to HTML page where Vue is defined to see it action. [![Running VueJS in ASP.NET MVC 5](http://www.mithunvp.com/wp-content/uploads/2017/08/vue-running.png)](http://www.mithunvp.com/wp-content/uploads/2017/08/vue-running.png)
+Run the application, navigate to HTML page where Vue is defined to see it action. {% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532975900/vue-running_z9ukat.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Running VueJS in ASP.NET MVC 5" %}
 
 Step 5 - Vue's Reactive nature
 ------------------------------
 
-When running the application, open console window of the browser (Chrome in this example), you can play with _message_ property of Vue instance as shown in the image below. As soon as you change _message_ property value, the DOM gets changed automatically [![Reactive nature of VueJS](http://www.mithunvp.com/wp-content/uploads/2017/08/vue-reactive.png)](http://www.mithunvp.com/wp-content/uploads/2017/08/vue-reactive.png)
+When running the application, open console window of the browser (Chrome in this example), you can play with _message_ property of Vue instance as shown in the image below. As soon as you change _message_ property value, the DOM gets changed automatically {% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532975900/vue-reactive_uh3oqk.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Reactive nature of VueJS" %}
 
 > The data and the DOM are now linked, and everything is now **reactive**.
