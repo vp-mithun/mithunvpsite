@@ -1,9 +1,8 @@
 ---
 title: ASP.NET Core Middleware - Write a Custom Middleware in Web API
 tags:
-  - Asp.NET Core
+  - ASP.NET Core
   - 'C#'
-  - middleware
 url: 497.html
 id: 497
 categories:
@@ -11,7 +10,10 @@ categories:
 date: 2016-06-09 20:38:01
 ---
 
-ASP.NET Core Middleware concept is one of powerful features introduced, it gives us complete control over HTTP pipeline using Request and response. They effectively replacement for HttpModules and HttpHandlers. ASP.NET docs explain [middleware](https://docs.asp.net/en/latest/fundamentals/middleware.html) concept quite well, have look at it. ASP.NET Core Middleware examples are UseMVC, UseStaticFiles, UseIdentity etc. They have specific purpose to do, thats why we might end with many of them. In this article, we will create custom middleware to be used in ASP.NET Core Web API. Lets understand the scenario for writing this custom middleware.
+ASP.NET Core Middleware concept is one of powerful features introduced, it gives us complete control over HTTP pipeline using Request and response.They effectively replace for HttpModules and HttpHandlers.
+ASP.NET docs explain [middleware](https://docs.asp.net/en/latest/fundamentals/middleware.html) concept quite well, have look at it. ASP.NET Core Middleware examples are UseMVC, UseStaticFiles, UseIdentity etc. They have specific purpose to do, thats why we might end with many of them.
+
+In this article, we will create custom middleware to be used in ASP.NET Core Web API. Lets understand the scenario for writing this custom middleware.
 
 *   Public APIs like Twitter, Google, Facebook etc provide us some sort of application key; naming them as "app-key", "user-key", "api-key" and so on.
 *   Similar to above examples, we might have created Web API which provides a key to those who are registered.
@@ -23,7 +25,7 @@ ASP.NET Core Middleware concept is one of powerful features introduced, it gives
 Quick assumptions "Registered user-key's are present in C# list, a repository is injected in StartUp.cs which checks if user key exists in C# list. We can read from database (any source) to check user key". Moving on from [Basic Web API](http://www.mithunvp.com/create-aspnet-mvc-6-web-api-visual-studio-2015/) created using ASP.NET Core, we will create following files in our solution
 
 *   Create "**Middleware**" folder in _ContactsAPI_ project, then create C# class "_**UserKeyValidatorsMiddleware**_".
-
+{% codeblock lang:cs %}
 using ContactsApi.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -52,7 +54,7 @@ namespace ContactsApi.Middleware
             }
             else
             {
-                if(!ContactsRepo.CheckValidUserKey(context.Request.Headers\["user-key"\]))
+                if(!ContactsRepo.CheckValidUserKey(context.Request.Headers["user-key"]))
                 {
                     context.Response.StatusCode = 401; //UnAuthorized
                     await context.Response.WriteAsync("Invalid User Key");
@@ -76,7 +78,7 @@ namespace ContactsApi.Middleware
     }
     #endregion
 }
-
+{% endcodeblock %}
 _UserKeyValidatorsMiddleware_ as ASP.NET Core Middleware
 --------------------------------------------------------
 
@@ -87,7 +89,7 @@ _UserKeyValidatorsMiddleware_ as ASP.NET Core Middleware
 *   C# Region "_ExtensionMethod_", provides user friendly name for this middleware when its placed in pipeline in StartUp.cs
 
 Now lets update _**IContactsRepository**_ to validate the user key Open _IContactsRepository_.cs and _ContactsRepository_.cs; add below code.
-
+{% codeblock lang:cs %}
 using ContactsApi.Models;
 using System.Collections.Generic;
 
@@ -104,9 +106,8 @@ namespace ContactsApi.Repository
         bool CheckValidUserKey(string reqkey);
     }
 }
-
- 
-
+{% endcodeblock %}
+{% codeblock lang:cs %} 
 using System.Collections.Generic;
 using System.Linq;
 using ContactsApi.Models;
@@ -177,9 +178,9 @@ namespace ContactsApi.Repository
         }
     }
 }
-
+{% endcodeblock %}
 Open _**Startup.cs**_ to add following highlighted line of code in "**Configure**". _**ApplyUserKeyValidation**_ is extension method written above (Not mandatory to make extension method)
-
+{% codeblock lang:cs %}
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
@@ -189,5 +190,9 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 
             app.UseMvc();
         }
-
-Now that we have created custom ASP.NET Core Middleware, added repository using DI and added it to pipeline. Let's see it working. Use POSTMAN to test this Web API **Test 1**: _user-key_ doesn't exists in Request Header. \[caption id="attachment_499" align="aligncenter" width="1024"\][![ASP.NET Core Middleware](http://www.mithunvp.com/wp-content/uploads/2016/06/middleware1-1024x426.png)](http://www.mithunvp.com/wp-content/uploads/2016/06/middleware1.png) Test showing "User Key" not present in Request Header\[/caption\] **Test 2:** _user-key_ exists but is INVALID \[caption id="attachment_500" align="aligncenter" width="1024"\][![asp.net core middleware](http://www.mithunvp.com/wp-content/uploads/2016/06/middleware2-1024x400.png)](http://www.mithunvp.com/wp-content/uploads/2016/06/middleware2.png) user-key exists in Request Header but is INVALID\[/caption\] **Test 3**: _user-key _exists, its VALID and return JSON response also. \[caption id="attachment_501" align="aligncenter" width="1024"\][![asp.net core middleware](http://www.mithunvp.com/wp-content/uploads/2016/06/middleware3-1024x516.png)](http://www.mithunvp.com/wp-content/uploads/2016/06/middleware3.png) Valid user-key exists and JSON response is seen\[/caption\] Refer [ContactsAPI repo](https://github.com/mithunvp/ContactsAPI) on Github for full source code. Let me know your thoughts on this.
+{% endcodeblock %}
+Now that we have created custom ASP.NET Core Middleware, added repository using DI and added it to pipeline. Let's see it working.
+Use POSTMAN to test this Web API **Test 1**: _user-key_ doesn't exists in Request Header. {% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532976135/middleware1_ixeajx.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Test showing 'User Key' not present in Request Header" %}
+**Test 2:** _user-key_ exists but is INVALID {% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532976134/middleware2_dbj5vh.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "user-key exists in Request Header but is INVALID" %}
+**Test 3**: _user-key_ exists, its VALID and return JSON response also. {% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532976133/middleware3_xwezbr.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Valid user-key exists and JSON response is seen" %}
+Refer [ContactsAPI repo](https://github.com/mithunvp/ContactsAPI) on Github for full source code. Let me know your thoughts on this.

@@ -7,7 +7,7 @@ tags:
 url: 322.html
 id: 322
 categories:
-  - ASP.NET Core 2
+  - ASP.NET Core
 date: 2016-01-17 14:48:07
 ---
 
@@ -225,23 +225,30 @@ Some quick notes of this ContactsController
 Step 6: Testing Contacts Web API using POSTMAN
 ----------------------------------------------
 
-ASP.NET Core 2 Web API allows disabling of launching browser when we debug the application. Right click on "_ContactsApi_", goto "_Properties_" and Select Debug. You can uncheck "_Launch URL_" check box to ensure it doesn't the open browser (this is optional). RUN/ DEBUG application by clicking "IIS Express" which starts Web API, we can use other ways to start the application. Since Web API does CRUD operations on Contacts using in memory collections. we will start with POST, GET, PUT, DELETE operations Using Chrome's POSTMAN extension to test client, it's very easy to use. Even Fiddler can also be used for testing.
+ASP.NET Core 2 Web API allows disabling of launching browser when we debug the application. Right click on "_ContactsApi_", goto "_Properties_" and Select Debug.
+You can uncheck "_Launch URL_" check box to ensure it doesn't the open browser (this is optional). RUN/ DEBUG application by clicking "IIS Express" which starts Web API, we can use other ways to start the application.
+
+Since Web API does CRUD operations on Contacts using in memory collections. 
+We will start with POST, GET, PUT, DELETE operations Using Chrome's POSTMAN extension to test client, it's very easy to use. Even Fiddler can also be used for testing.
 
 ##### Contacts API's POST operation
 
-[![Contacts API POST operation](http://www.mithunvp.com/wp-content/uploads/2016/01/fourth.png)](http://www.mithunvp.com/wp-content/uploads/2016/01/fourth.png) Point 2 provides location header which can be used fetch result.
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532977256/fourth_cczjoo.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Contacts API POST operation" %}
+
+Point 2 provides location header which can be used fetch result.
 
 ##### Contacts API GET operation
 
-[![Contacts Api GET operation](http://www.mithunvp.com/wp-content/uploads/2016/01/five.png)](http://www.mithunvp.com/wp-content/uploads/2016/01/five.png)
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532977255/five_ngkjio.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Contacts Api GET operation" %}
 
 ##### Contacts API PUT operation
 
-[![Contacts Api PUT operation](http://www.mithunvp.com/wp-content/uploads/2016/01/six.png)](http://www.mithunvp.com/wp-content/uploads/2016/01/six.png)
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532977253/six_hgejj5.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Contacts Api PUT operation" %}
 
 ##### Contacts API DELETE operation
 
-[![Contacts Api DELETE operation](http://www.mithunvp.com/wp-content/uploads/2016/01/seven.png)](http://www.mithunvp.com/wp-content/uploads/2016/01/seven.png) 
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532977254/seven_ussscd.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Contacts Api DELETE operation" %}
+
 This sample will be made better by adding logging, connecting to the database using EF Core or EF 6 or any ORMs.
 
 > Read [Integrating EF Core](http://www.mithunvp.com/aspnet-core-web-api-entity-framework-core/) with ASP.NET Core 2 Web API

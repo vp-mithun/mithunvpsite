@@ -1,12 +1,12 @@
 ---
 title: Building fully Asynchronous ASP.NET Core 2 Web API
 tags:
-  - ASP.NET Core 2
+  - ASP.NET Core
+  - AsyncAwait
 url: 657.html
 id: 657
 categories:
-  - ASP.NET Core 2
-  - Async
+  - ASP.NET Core  
 date: 2017-08-23 13:44:55
 ---
 
