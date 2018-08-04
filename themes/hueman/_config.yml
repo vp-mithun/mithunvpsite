@@ -17,9 +17,9 @@ customize:
     thumbnail: false # enable posts thumbnail, options: true, false
     favicon: # path to favicon
     social_links: # for more icons, please see http://fontawesome.io/icons/#brand
-        twitter: /
-        facebook: /
-        google-plus: /
+        twitter: https://twitter.com/mithunpattankar
+        facebook: https://www.facebook.com/mithunvpcom
+        google-plus: https://plus.google.com/+MithunPattankaR
         github: https://github.com/mithunvp        
 
 # Widgets

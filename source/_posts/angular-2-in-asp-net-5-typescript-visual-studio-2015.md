@@ -11,7 +11,8 @@ categories:
 date: 2016-01-06 23:13:06
 ---
 
-This tutorial aims for starting Angular in ASP.NET Core using Visual Studio IDE(2015/ 2017). The release of Angular, ASP.NET Core is becoming interesting to build SPA. I have compiled the steps involved in starting to learn Angular. This is detailed explanation, you will feel much easier at end of article.
+This tutorial aims for starting Angular in ASP.NET Core using Visual Studio IDE(2015/ 2017). The release of Angular, ASP.NET Core is becoming interesting to build SPA. 
+I have compiled the steps involved in starting to learn Angular. This is detailed explanation, you will feel much easier at end of article.
 
 > _August 2018 - Article updated with ASP.NET Core, Angular 6 release with Webpack as module bundler in Visual Studio 2017._
 
@@ -21,9 +22,9 @@ Open Visual Studio 2017 Preview IDE Community Edition, Select New Web Project na
 
 ## Step 2: Configure ASP.NET Core to serve Static Files
 
-_ASP.NET Core_ is designed as pluggable framework to include and use only necessary packages, instead of including too many initial stuff. Lets create HTML file named “**_index.html_**” under **wwwroot** folder. Right click on **wwwroot** folder, Add New Item and create _index.html_ file. This HTML page will act as default page.
+_ASP.NET Core_ is designed as pluggable framework to include and use only necessary packages, instead of including too many initial stuff. Lets create HTML file named “**_index.html_**” under **wwwroot** folder. 
+Right click on **wwwroot** folder, Add New Item and create _index.html_ file. This HTML page will act as default page.
 {% codeblock lang:html %}
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +36,8 @@ _ASP.NET Core_ is designed as pluggable framework to include and use only necess
 </body>
 </html>
 {% endcodeblock %}
-For ASP.NET Core to serve static files, we need to add _**StaticFiles**_ middle ware in Configure method of **Startup.cs** page. Ensure that packages are restored properly. _**project.json**_ is redesigned to make it better, we have **Static Files middleware** to serve static assets like HTML, JS files etc.
+For ASP.NET Core to serve static files, we need to add _**StaticFiles**_ middle ware in Configure method of **Startup.cs** page. 
+Ensure that packages are restored properly. _**project.json**_ is redesigned to make it better, we have **Static Files middleware** to serve static assets like HTML, JS files etc.
 {% codeblock lang:cs %}
 public void Configure(IApplicationBuilder app)
 {
@@ -50,7 +52,10 @@ Run the application now, ASP.NET Core renders static HTML page. **Delete this in
 
 ## Step 3: Angular 6 in ASP.NET Core
 
-Angular is famously claiming to be ONE Framework for MOBILE and DESKTOP apps. This tutorial refers [5 MIN QUICK START](https://angular.io/docs/ts/latest/quickstart.html) for getting started, it's more focused on other light weight code editors; but here we are using Visual Studio 2017 Community Edition (Preview) for its built in TypeScript tooling and other features. We will be using **Webpack** for module bundler, it's an excellent alternative to the systemJS approach. To know more about inner details of read ["webpack and Angular](https://angular.io/docs/ts/latest/guide/webpack.html#!#configure-webpack) Majority of webpack scripting is based on AngularClass's [angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter). I have modified according to ASP.NET Core web apps.
+Angular is famously claiming to be ONE Framework for MOBILE and DESKTOP apps. This tutorial refers [5 MIN QUICK START](https://angular.io/docs/ts/latest/quickstart.html) for getting started, it's more focused on other light weight code editors; but here we are using Visual Studio 2017 Community Edition (Preview) for its built in TypeScript tooling and other features. 
+
+We will be using **Webpack** for module bundler, it's an excellent alternative to the systemJS approach. To know more about inner details of read ["webpack and Angular](https://angular.io/docs/ts/latest/guide/webpack.html#!#configure-webpack) Majority of webpack scripting is based on AngularClass's [angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter). 
+I have modified according to ASP.NET Core web apps.
 
 > ASP.NET Core here is SPA type of web application, not MVC application.
 
@@ -64,7 +69,10 @@ Why I choose Webpack for Angular in ASP.NET Core?
 
 ## Step 4: Adding NPM Configuration file for Angular packages
 
-Angular team is pushing the code changes using NPM rather than CDN or any other source, due to this we need to add NPM configuration file (_package.json_) to this ASP.NET Core application. Right Click on "**ngCoreContacts**", add new file "_NPM Configuration File_"; by default **package.json** is added to ASP.NET Core project. _This acts Node Package Manager (NPM) file, a must for adding packages for Angular_ From the Angular Quick start provided above, we need to add dependencies for required for Angular in ASP.NET Core application. Copy Paste below configuration in **package.json** file
+Angular team is pushing the code changes using NPM rather than CDN or any other source, due to this we need to add NPM configuration file (_package.json_) to this ASP.NET Core application. 
+
+Right Click on "**ngCoreContacts**", add new file "_NPM Configuration File_"; by default **package.json** is added to ASP.NET Core project. _This acts Node Package Manager (NPM) file, a must for adding packages for Angular_ From the Angular Quick start provided above, we need to add dependencies for required for Angular in ASP.NET Core application. 
+Copy Paste below configuration in **package.json** file
 {% codeblock lang:json %}
 {
 "version": "1.0.0",
@@ -162,7 +170,9 @@ Right after saving this, ASP.NET Core starts restoring the packages. It would do
 
 ## Step 5: Add TypeScript configuration file - must for Angular in ASP.NET Core using TypeScript
 
-We are creating Angular in ASP.NET Core starting with TypeScript, this obvious reason adds to include TypeScript Configuration file which does work of transpiling it to JavaScript, module loading, target ES5 standards. Refer my article on [Getting Started with TypeScript](http://www.mithunvp.com/typescript-in-asp-net-5-using-visual-studio-2015/) if you just want beginner intro on it. Add "_**tsconfig.json**_" in the project, copy paste below configuration.
+We are creating Angular in ASP.NET Core starting with TypeScript, this obvious reason adds to include TypeScript Configuration file which does work of transpiling it to JavaScript, module loading, target ES5 standards. 
+
+Refer my article on [Getting Started with TypeScript](http://www.mithunvp.com/typescript-in-asp-net-5-using-visual-studio-2015/) if you just want beginner intro on it. Add "_**tsconfig.json**_" in the project, copy paste below configuration.
 
 > "**baseUrl**" ensures that TypeScript files are transpiled to JavaScript from the '**./clientsrc**'. This folder is virtual directory for TypeScript
 
@@ -179,23 +189,23 @@ We are creating Angular in ASP.NET Core starting with TypeScript, this obvious r
 "noEmitHelpers": true,
 "strictNullChecks": false,
 "baseUrl": "./clientsrc",
-"paths": \[\],
-"lib": \[
+"paths": [],
+"lib": [
 "dom",
 "es6"
-\],
-"types": \[
+],
+"types": [
 "hammerjs",  
  "node",  
  "source-map",
 "uglify-js",
 "webpack"
-\]
+]
 },
-"exclude": \[
+"exclude": [
 "node_modules",
 "dist"
-\],
+],
 "awesomeTypescriptLoaderOptions": {
 "forkChecker": true,
 "useWebpackText": true
@@ -211,7 +221,13 @@ We are creating Angular in ASP.NET Core starting with TypeScript, this obvious r
 
 #### What is Webpack?
 
-Webpack is a powerful module bundler. A bundle is a JavaScript file that incorporate assets that belong together and should be served to the client in a response to a single file request. A bundle can include JavaScript, CSS styles, HTML, and almost any other kind of file. Webpack roams over your application source code, looking for import statements, building a dependency graph, and emitting one (or more) bundles. With plugin "loaders" Webpack can preprocess and minify different non-JavaScript files such as TypeScript, SASS, and LESS files. In package.json, we have added **"**webpack**"** packages as **"**devdependencies**"**. They will perform all bundling work. What webpack does is written in a JavaScript configuration file know as **webpack.config.js**. As always the applications are run in **Development**, **Test** and **Production** environment. There are some common functionalities and some specific to environments. We will focus on **development** and **production** environment to write accordingly. **Development** environment should have source maps for debugging TypeScript files, _minifying bundles of JS, CSS etc files not necessary._ **Production** environment should minify bundles to reduce loading time, do not include source maps. Webpack 2 also does tree shaking i.e. eliminate unused code to further reduce bundle sizes.
+Webpack is a powerful module bundler. A bundle is a JavaScript file that incorporate assets that belong together and should be served to the client in a response to a single file request. 
+
+A bundle can include JavaScript, CSS styles, HTML, and almost any other kind of file. Webpack roams over your application source code, looking for import statements, building a dependency graph, and emitting one (or more) bundles. With plugin "loaders" Webpack can preprocess and minify different non-JavaScript files such as TypeScript, SASS, and LESS files. 
+
+In package.json, we have added **"**webpack**"** packages as **"**devdependencies**"**. They will perform all bundling work. What webpack does is written in a JavaScript configuration file know as **webpack.config.js**. As always the applications are run in **Development**, **Test** and **Production** environment. There are some common functionalities and some specific to environments. We will focus on **development** and **production** environment to write accordingly. 
+
+**Development** environment should have source maps for debugging TypeScript files, _minifying bundles of JS, CSS etc files not necessary._ **Production** environment should minify bundles to reduce loading time, do not include source maps. Webpack 2 also does tree shaking i.e. eliminate unused code to further reduce bundle sizes.
 
 > The entire source code is on my [github repo](https://github.com/mithunvp/ng2CoreContacts), fork or clone to play with it.
 
@@ -237,7 +253,11 @@ Now let’s see **webpack.prod.js** for production purpose
 
 ## Step 7: Writing Angular application
 
-Until now we created ASP.NET Core app, added TSconfig file, webpack configuration. Now it’s time to write Angular application In the github repo, you can see **"clientsrc"** folder. This contains the angular app which gets bundled into using webpack configurations we wrote **"**Clientsrc**"** folder has index.html, polyfills.browses.ts, vendor.browsers.ts and mostly importantly **boot.ts** We have **app** folder containing HTML, Angular components and root level module (**app.module.ts**) which gets loaded while bootstrapping application. Some of files might be not interesting now, will focus them in separate articles later.
+Until now we created ASP.NET Core app, added TSconfig file, webpack configuration. Now it’s time to write Angular application In the github repo, you can see **"clientsrc"** folder. 
+
+This contains the angular app which gets bundled into using webpack configurations we wrote **"**Clientsrc**"** folder has index.html, polyfills.browses.ts, vendor.browsers.ts and mostly importantly **boot.ts** We have **app** folder containing HTML, Angular components and root level module (**app.module.ts**) which gets loaded while bootstrapping application. 
+
+Some of files might be not interesting now, will focus them in separate articles later.
 
 ## Step 8: Running the application
 
@@ -263,10 +283,12 @@ This invokes webpack*-dev-server*, runs the development config and watches for a
 
 **Running the application in Production mode** Assuming the application is now ready to deployed, we need to have PROD build. For this run command
 
-//builds app and copies in wwwroot
-Npm run build:prod
+**npm run build:prod**
 
-Now if you see wwwroot folder, we see the HTML, JS bundle files. This wwwroot folder can be deployed on any web server like IIS or nginx You can either do F5 to run from Visual Studio IDE or run command **npm run server:prod**   \[caption id="attachment_554" align="aligncenter" width="583"\][![Angular 2 in ASP.NET Core](http://www.mithunvp.com/wp-content/uploads/2016/01/npmstart.png)](http://www.mithunvp.com/wp-content/uploads/2016/01/npmstart.png) Angular 2 running on ASP.NET Core using Web pack\[/caption\] There is Angular 2 application development using [Angular 2 Command Line Interface](http://www.mithunvp.com/build-angular-apps-using-angular-2-cli/) also, it's interesting !!
+Now if you see wwwroot folder, we see the HTML, JS bundle files. This wwwroot folder can be deployed on any web server like IIS or nginx You can either do F5 to run from Visual Studio IDE or run command **npm run server:prod**   
+
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532976125/npmstart_rs1upl.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Angular 2 in ASP.NET Core" %} 
+
+There is Angular 2 application development using [Angular 2 Command Line Interface](http://www.mithunvp.com/build-angular-apps-using-angular-2-cli/) also, it's interesting !!
 
 > Check out source code on my [Github repo ng2CoreContacts](https://github.com/mithunvp/ng2CoreContacts)
-

@@ -10,12 +10,12 @@ categories:
 date: 2015-09-13 02:58:02
 ---
 
-Why build responsive UI? Answer seems obvious that end-user should experience that application doesn't hang often (for developers POV, a time taking background operation makes it look like hanging). So lets learn building responsive UI using Async Await keywords
+Why build responsive UI? Answer seems obvious that end-user should experience that application doesn't hang often (for developers POV, a time taking background operation makes it look like hanging). 
+So lets learn building responsive UI using Async Await keywords
 
 > Visual Studio 2012 introduced a simplified approach, async programming, that leverage asynchronous support in the .NET Framework 4.5 and the Windows Runtime. The compiler does the difficult work that the developer used to do, and your application retains a logical structure that resembles synchronous code. This is extract from [MSDN](https://msdn.microsoft.com/en-us/library/hh191443.aspx)
 
-##### Source Code was in written Visual Studio 2015 Community Edition, WPF, C#, .NET 4.5 on Windows 7 OS. However it can be used with Visual Studio 2013/2012(any version) on Windows 8, Windows 10 also.
-
+##### Source Code was in written Visual Studio 2015 Community Edition, WPF, C#, .NET 4.5 on Windows 7 OS.
 
 Building Responsive UI using Async Await in C#
 ----------------------------------------------
@@ -162,17 +162,19 @@ namespace WordCount.UI
     }
 }
 {% endcodeblock %}
-[![WPF Main Window for Async Await Demo](http://www.mithunvp.com/wp-content/uploads/2015/09/asyncWindow.png)](http://www.mithunvp.com/wp-content/uploads/2015/09/asyncWindow.png)
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532977745/asyncWindow_f9tyhx.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "WPF Main Window for Async Await Demo" %}
 
 ### Testing the responsiveness of the WPF UI
 
-*   Click on button "Search Words", try to move window, resize it. You can't do anything as it reads the file, finds all words count and binds to list box. This is called non responsive UI or application hanging. Check out GIF image below. Notice that after it loads list box, screen window moves bit because after button click I tried to use window.
-[![Non Responsive UI on button click](http://www.mithunvp.com/wp-content/uploads/2015/09/asyncNONresponsive.gif)](http://www.mithunvp.com/wp-content/uploads/2015/09/asyncNONresponsive.gif)
+* Click on button "Search Words", try to move window, resize it. You can't do anything as it reads the file, finds all words count and binds to list box. This is called non responsive UI or application hanging. 
+
+Check out GIF image below. Notice that after it loads list box, screen window moves bit because after button click I tried to use window.
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532977742/asyncNONresponsive_ku6yu3.gif 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Non Responsive UI on button click" %}
 
 *   Now run application again, click "Search Words Async Way". Just move around window, resize it, see Log information being written. This called **RESPONSIVE UI using Async Await in C#**
 *   Just play around it by clicking buttons back and forth.
 
-[![Responsive UI using Async Await](http://www.mithunvp.com/wp-content/uploads/2015/09/NewResponsiveUI.gif)](http://www.mithunvp.com/wp-content/uploads/2015/09/NewResponsiveUI.gif)  
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532977737/NewResponsiveUI_d0ja7v.gif 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Responsive UI using Async Await" %}
 
 > *   Async methods are intended to be non-blocking operations. An await expression in an async method doesn’t block the current thread while the awaited task is running.
 > *   The async and await keywords don't cause extra threads to be created. Async methods don't need multi-threading because an async method doesn't run on its own thread.

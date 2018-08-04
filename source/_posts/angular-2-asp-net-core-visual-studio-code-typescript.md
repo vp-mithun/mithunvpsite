@@ -12,7 +12,8 @@ categories:
 date: 2016-02-19 19:50:28
 ---
 
-Angular 2 in ASP.NET Core 1.0 are going to redefine web development experience for developers. Thinking of creating ASP.NET website outside Visual Studio IDE was nightmare, but with advent of ASP.NET Core 1.0 as truly open source cross-platform technology it so exciting to create these apps without Visual Studio IDE.
+Angular 2 in ASP.NET Core 1.0 are going to redefine web development experience for developers. 
+Thinking of creating ASP.NET website outside Visual Studio IDE was nightmare, but with advent of ASP.NET Core 1.0 as truly open source cross-platform technology it so exciting to create these apps without Visual Studio IDE.
 
 In this tutorial I will summaries steps of  using Angular 2 in ASP.NET Core 1.0 using Visual Studio Code as editor not as IDE. These steps can be similar if want to work on Linux or Mac OS.
 

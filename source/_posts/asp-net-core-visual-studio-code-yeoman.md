@@ -32,7 +32,9 @@ NPM(Node Package Manager) is used to install Yeoman, Angular and other packages.
 Going through [GETTING STARTED WITH YEOMAN](http://yeoman.io/learning/) will help us get Yeoman installed and its usage.
 
 [Visual Studio Code](https://code.visualstudio.com/) (VS Code) is code editor redefining how simpler life can get, esp I liked idea of working with ASP.NET Core 1.0 apps without full fledged Visual Studio IDE. 
-Quick snapshot of NPM, Yeoman installed. Installing them globally will avoid doing these steps again. [![Verify NPM and Yeoman are installed](http://www.mithunvp.com/wp-content/uploads/2016/02/npm-yeoman.png)](http://www.mithunvp.com/wp-content/uploads/2016/02/npm-yeoman.png)
+Quick snapshot of NPM, Yeoman installed. Installing them globally will avoid doing these steps again. 
+
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532976515/npm-yeoman_cbjbtc.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Verify NPM and Yeoman are installed" %}
 
 Step 2: Install ASPNET Yeoman generator
 ---------------------------------------

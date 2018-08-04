@@ -8,7 +8,10 @@ date: 2016-05-11 00:10:49
 tags: AngularCLI
 ---
 
-[**Angular 2 CLI **aka Command Line Interface](https://cli.angular.io/) is developed to get started quickly for building Angular  apps, especially when the entire community felt that setting up Angular 2 development environment was cumbersome. With introduction of Angular CLI, it's now easier than ever to create, run builds, do E2E (end to end) tests, run apps and deploy Angular 2 application. In this article, I will build a very basic Angular application exclusively using CLI. So let's started. What we will learn here?
+[**Angular CLI **aka Command Line Interface](https://cli.angular.io/) is developed to get started quickly for building Angular  apps, especially when the entire community felt that setting up Angular 2 development environment was cumbersome. 
+With introduction of Angular CLI, it's now easier than ever to create, run builds, do E2E (end to end) tests, run apps and deploy Angular 2 application. In this article, I will build a very basic Angular application exclusively using CLI. So let's started. 
+
+What we will learn here?
 
 1.  Installing Angular CLI using NPM.
 2.  Creating an Angular application using command line interface
@@ -23,7 +26,6 @@ Ensure you have latest **NPM** and **Node** installed on your machine. After tha
 
 npm install -g angular-cli
 
-
 Creating an Angular application using CLI
 -------------------------------------------
 
@@ -31,7 +33,7 @@ We will be creating a simple "**OurPlanets**" application displaying list of our
 
 ng new OurPlanets --prefix Planets
 
-[![Running "ng new " command](http://www.mithunvp.com/wp-content/uploads/2016/05/createCLI.png)](http://www.mithunvp.com/wp-content/uploads/2016/05/createCLI.png)
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532976129/createCLI_jjiycj.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Running "ng new " command" %}
 
 1.  CLI command - **ng new** to create application
 2.  List of files created using CLI command
@@ -41,7 +43,8 @@ ng new OurPlanets --prefix Planets
 Examine CLI created "_OurPlanets_" project structure in Visual Studio Code
 --------------------------------------------------------------------------
 
-Open Visual Studio code, load this project to check out project structure got created by CLI [![OurPlanets project structure](http://www.mithunvp.com/wp-content/uploads/2016/05/projstru.png)](http://www.mithunvp.com/wp-content/uploads/2016/05/projstru.png)
+Open Visual Studio code, load this project to check out project structure got created by CLI 
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532976128/projstru_f0cvpf.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "OurPlanets project structure" %}
 
 1.  "**e2e**" folder containing test files, configurations for performing end to end testing.
 2.  "**node_modules**" folder contains all packages restored as per _package.json_
@@ -75,17 +78,16 @@ As "_OurPlanets_" application is about solar system planets, it's time to creat
 
 Run the following commands to create "planet.model" model class and "planet.service" service.
 
-//create planet model
-ng generate class shared/planets model
+**ng generate class shared/planets model**
 
-//create planet service
-ng generate service shared/planets
+**ng generate service shared/planets**
 
 Note: class generating command lets have suffix with 'model', service generating command creates file with 'service' suffix.
 
 > CLI also generates spec TS files used for unit testing
 
 Open _**planets.model.ts**_ file & copy below code, its really simple class with four fields.
+
 {% codeblock lang:ts %}
 export class Planets {
     position: number;
@@ -103,12 +105,12 @@ import { Planets } from './planets.model';
 export class PlanetsService {
 
   constructor() {}
-  getPlanets(): Promise<Planets\[\]>{
+  getPlanets(): Promise<Planets[]>{
     return Promise.resolve(PLANETSDATA);
   }
 }
 
-const PLANETSDATA: Planets\[\] = \[
+const PLANETSDATA: Planets[] = [
   {position: 1, name: 'Mercury',distanceFromSun: 58,description: '88 earth days to orbit the sun' },
   {position: 2, name: 'Venus',distanceFromSun: 108,  description: '225 earth days to orbit the sun' },
   {position: 3, name: 'Earth',distanceFromSun: 150,  description: '365 earth days to orbit the sun' },
@@ -117,7 +119,7 @@ const PLANETSDATA: Planets\[\] = \[
   {position: 6, name: 'Saturn',distanceFromSun: 886,  description: '29 earth years to orbit the sun' },
   {position: 7, name: 'Uranus',distanceFromSun: 1800,  description: '84 earth years to orbit the sun' },
   {position: 8, name: 'Neptune',distanceFromSun: 2800,  description: '165 earth years to orbit the sun' }
-\];
+];
 {% endcodeblock %}
 Loading Planets data on UI
 --------------------------
@@ -130,10 +132,10 @@ import { Planets, PlanetsService } from './shared';
 @Component({
   selector: 'Planets-root',
   templateUrl: './app.component.html',
-  styleUrls: \['./app.component.css'\]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  planetsList: Planets\[\] = \[\];
+  planetsList: Planets[] = [];
   constructor(
     private _planetservice: PlanetsService) {}
 
@@ -161,20 +163,22 @@ import { PlanetsService } from './shared';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: \[
+  declarations: [
     AppComponent
-  \],
-  imports: \[
+  ],
+  imports: [
     BrowserModule,
     FormsModule,
     HttpModule
-  \],
-  providers: \[PlanetsService\],
-  bootstrap: \[AppComponent\]
+  ],
+  providers: [PlanetsService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 {% endcodeblock %}
-Run **"ng serve"** command & open localhost:4200 in browser to see running application [![OurPlanets running on browser](http://www.mithunvp.com/wp-content/uploads/2016/05/runningApp.png)](http://www.mithunvp.com/wp-content/uploads/2016/05/runningApp.png)
+Run **"ng serve"** command & open localhost:4200 in browser to see running application 
+
+{% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532976127/runningApp_vpcpz4.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "OurPlanets running on browser" %}
 
 What's next?
 ------------
