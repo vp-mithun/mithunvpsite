@@ -18,11 +18,12 @@
         <%- partial('post/nav', {post: page}) %>
     <% } %>
     <div class="widgets-container">
-        <%- partial('customads/rectangular') %>
+        &nbsp;<%- partial('customads/rectangular') %>
         <% if (theme.widgets) { %>
             <% theme.widgets.forEach(function(widget) { %>
                 <%- partial('widget/' + widget, {post: page}) %>
             <% }) %>
         <% } %>
     </div>
+    &nbsp;<%- partial('customads/responsive') %>
 </aside>
