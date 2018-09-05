@@ -18,5 +18,17 @@
         <%- partial('common/footer', null, {cache: !config.relative_link}) %>
         <%- partial('common/scripts') %>
     </div>
+    <script>
+        console.log(window.netlifyIdentity + '1');
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      </script>
 </body>
 </html>
