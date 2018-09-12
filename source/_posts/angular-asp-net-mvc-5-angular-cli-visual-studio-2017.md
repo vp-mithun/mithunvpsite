@@ -12,7 +12,7 @@ date: 2018-05-29 18:34:47
 ---
 
 **Angular** is one of most in-demand web front-end frameworks developed by Google, it gets integrated with any Server side technology. 
-In this article, let's learn how to use Angular (Version 6) with ASP.NET MVC 5 using Angular-CLI. I had written a post a year back on Using Angular4 in [ASP.NET MVC 5](http://www.mithunvp.com/using-angular-2-asp-net-mvc-5-visual-studio/).
+In this article, let's learn how to use Angular (Version 6) with ASP.NET MVC 5 using Angular-CLI. I had written a post a year back on Using Angular4 in [ASP.NET MVC 5](https://www.mithunvp.com/using-angular-2-asp-net-mvc-5-visual-studio/).
  
  I felt it was little tedious to get it working as so many technologies are involved. This article describes minimal steps to get started.
 
@@ -101,3 +101,8 @@ We successfully ran the Angular code in ASP.NET MVC 5, debugging the code in the
 Check out below image for file location while running application. Do run the command _**ng build --watch**_ to compile Angular code automatically 
 
 {% cloudinary https://res.cloudinary.com/dqnzwoh8g/image/upload/v1532975896/runningDebugging_nimz3w.png 320px=c_scale,q_auto:good,w_320;640px=c_scale,q_auto:good,w_640 "Running & Debugging Angular Code in ASP.NET MVC 5" %}
+
+## What's Next?
+Now that we integrated the Angular into ASP.NET MVC 5, let's create Angular Component, Service to get my GitHub Repositories. 
+
+Check out [Adding Angular component, service, class to ASP.NET MVC 5](https://www.mithunvp/adding-Angular-component-service-class-to-asp-net-mvc-5) for more on this.
