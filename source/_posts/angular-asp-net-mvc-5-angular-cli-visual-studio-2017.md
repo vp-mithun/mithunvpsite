@@ -106,3 +106,5 @@ Check out below image for file location while running application. Do run the co
 Now that we integrated the Angular into ASP.NET MVC 5, let's create Angular Component, Service to get my GitHub Repositories. 
 
 Check out [Adding Angular component, service, class to ASP.NET MVC 5](https://www.mithunvp.com/adding-Angular-component-service-class-to-asp-net-mvc-5) for more on this.
+
+Check out [Deploying Angular with ASP.NET MVC 5 on IIS](https://www.mithunvp.com/Deploying-Angular-with-ASP-NET-MVC-5-on-IIS)
