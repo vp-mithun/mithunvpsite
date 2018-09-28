@@ -48,7 +48,7 @@ To generate one such service, run the below CLI command from the root folder of 
 
 **Breaking down the code **
 
-- **HttpClient** is an Angular module to call REST APIs, its dependency injected in the constructor (line 12)
+- **HttpClient** is an Angular module to call REST APIs, its dependency injected(DI) in the constructor (line 12)
 - **getUserRepos** method calls my Github Repo using GitHub APIs to get the list of public repositories
 While GitHub APIs response is quite extensive, we are interested only a few fields. So for this we use **RxJS map** operator to map to class _GithubRepoInfo_ created above. (line 14 - 26)
 
