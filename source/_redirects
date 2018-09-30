@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://hardcore-bell-28aa81.netlify.com/* https://www.mithunvp.com/:splat 301!
