@@ -2,7 +2,7 @@
 title: Starting Angular in ASP.NET Core with TypeScript using Visual Studio IDE
 tags:
   - Angular
-  - Asp.NET Core
+  - ASP.NET Core
 url: 303.html
 id: 303
 categories:

@@ -1,8 +1,8 @@
 ---
 title: Integrating ASP.NET Core 2 Web API and Entity Framework Core 2
 tags:
-  - ASP.NETCore
-  - EFCore2
+  - ASP.NET Core
+  - EFCore
 url: 562.html
 id: 562
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Creating ASP.NET Core 2 Web API in Visual Studio 2017
 tags:
-  - ASP.NET Core 2
+  - ASP.NET Core
   - 'C#'
   - Visual Studio
 url: 322.html

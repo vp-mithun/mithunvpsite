@@ -2,7 +2,7 @@
 title: Angular Material 2 - Using in Angular 2 apps with Angular CLI
 tags:
   - Angular
-  - AngularMaterial
+  - Angular Material
 url: 547.html
 id: 547
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Using TypeScript with ASP.NET MVC 5 instead of JavaScript
 tags:
-  - ASP.NET MVC5
+  - ASP.NET MVC 5
   - TypeScript
 url: 636.html
 id: 636

@@ -1,7 +1,7 @@
 ---
 title: ASP.NET Core - Create web application using Yeoman and Visual Studio Code
 tags:
-  - Asp.NET Core
+  - ASP.NET Core
   - Visual Studio Code
 url: 357.html
 id: 357

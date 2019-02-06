@@ -2,7 +2,7 @@
 title: Angular 2 in ASP.NET Core 1.0 using Visual Studio Code and TypeScript
 tags:
   - Angular
-  - Asp.NET Core
+  - ASP.NET Core
   - Visual Studio Code
 url: 375.html
 id: 375
