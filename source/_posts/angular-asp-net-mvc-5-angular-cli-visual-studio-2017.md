@@ -1,5 +1,5 @@
 ---
-title: Using Angular in ASP.NET MVC 5 with Angular CLI and Visual Studio 2017
+title: Using Angular 8 in ASP.NET MVC 5 with Angular CLI and Visual Studio 2017
 tags:
   - Angular
   - MVC 5
@@ -12,15 +12,17 @@ date: 2018-05-29 18:34:47
 ---
 
 **Angular** is one of most in-demand web front-end frameworks developed by Google, it gets integrated with any Server side technology. 
-In this article, let's learn how to use Angular (Version 6) with ASP.NET MVC 5 using Angular-CLI. I had written a post a year back on Using Angular4 in [ASP.NET MVC 5](https://www.mithunvp.com/using-angular-2-asp-net-mvc-5-visual-studio/).
+In this article, let's learn how to use Angular (Version 8) with ASP.NET MVC 5 using Angular-CLI. I had written a post a year back on Using Angular4 in [ASP.NET MVC 5](https://www.mithunvp.com/using-angular-2-asp-net-mvc-5-visual-studio/).
  
  I felt it was little tedious to get it working as so many technologies are involved. This article describes minimal steps to get started.
+
+ > Upgraded to use Angular 8 with ASP.NET MVC 5
 
  Software pre-requites
 
 *   Microsoft Visual Studio 2017 (Community Edition)
 *   Install Latest [NodeJs](https://nodejs.org/en/)
-*   TypeScript 2.6 minimum.
+*   TypeScript 3.4
 
 Installing Angular CLI
 ----------------------

@@ -5,8 +5,8 @@
 # Site
 title: Mithunvp.com
 subtitle:
-description:
-keywords:
+description: Interesting article of cutting edge technologies in software development
+keywords: ASP.NET Core, .NET Core, Angular, EF Core, GraphQL, TypeScript, 
 author: Mithun Pattankar
 language: en
 timezone:
@@ -89,3 +89,14 @@ lazyload:
   enable: true 
   onlypost: false
   loadingImg: # eg /images/loading.gif
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
