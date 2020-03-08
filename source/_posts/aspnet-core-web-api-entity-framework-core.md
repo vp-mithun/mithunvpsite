@@ -25,7 +25,7 @@ It eliminates the need for most of the data-access code that developers usually 
 Creating ASP.NET Core Web API
 -----------------------------
 
-This is a continuation of [Creating ASP.NET Core WebAPI](http://www.mithunvp.com/create-aspnet-mvc-6-web-api-visual-studio-2015/), recommend to read it to move further here. You can still create your own project too.
+This is a continuation of [Creating ASP.NET Core WebAPI](http://www.mithunvp.com/create-aspnet-mvc-6-web-api-visual-studio-2017/), recommend to read it to move further here. You can still create your own project too.
 
 Adding Entity Framework Core packages
 -------------------------------------
