@@ -17,6 +17,8 @@ Topics Covered
 - Use RxJS for transforming an object
 - Angular Component to display data
 
+> Upgraded to use Angular 9 with ASP.NET MVC 5 on branch _**mvc5angular9**_
+
 We are using the same ngGitHouse application from the previous article. Generate and add a class, services, components using Angular CLI using Visual Studio IDE.
 Use the [Angular CLI documentation](https://github.com/angular/angular-cli/wiki) for commands. 
 ## Class
