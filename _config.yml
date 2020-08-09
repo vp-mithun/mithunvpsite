@@ -91,9 +91,13 @@ lazyload:
   loadingImg: # eg /images/loading.gif
 
 feed:
-  type: atom
-  path: atom.xml
-  limit: 20
+  type: 
+    - atom
+    - rss2
+  path: 
+    -atom.xml
+    - rss2.xml
+  limit: 0
   hub:
   content:
   content_limit: 140
