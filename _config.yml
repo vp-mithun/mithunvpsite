@@ -18,7 +18,7 @@ root: /
 permalink: :title/
 permalink_defaults:
 
-all_minifier: true
+
 
 # Directory
 source_dir: source
